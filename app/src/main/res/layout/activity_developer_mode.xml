@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_small"
+        android:orientation="vertical"
+        android:elevation="6dp"
+        android:background="@color/background_floating_material_light">
+
+        <MaterialEditText
+            android:id="@+id/developer_mode_edt_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/keyline_1"
+            android:layout_marginRight="@dimen/keyline_1"
+            android:text="@string/hello_world"/>
+
+        <MaterialEditText
+            android:id="@+id/developer_mode_edt_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/keyline_1"
+            android:layout_marginRight="@dimen/keyline_1"
+            android:text="@string/hello_world"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingTop="@dimen/padding_small"
+        android:paddingBottom="@dimen/padding_small">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Text size -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:layout_marginLeft="@dimen/keyline_1"
+                android:layout_marginRight="@dimen/keyline_1"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:text="Text size"/>
+
+            <LinearLayout
+                android:id="@+id/developer_mode_lin_text_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/keyline_1"
+                android:paddingRight="@dimen/keyline_1">
+
+                <SeekBar
+                    android:id="@+id/developer_mode_seek_text_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingBottom="@dimen/padding_xsmall"
+                    android:paddingTop="@dimen/padding_xsmall"/>
+
+                <TextView
+                    android:id="@+id/developer_mode_tv_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_small"
+                    android:gravity="center_horizontal"/>
+            </LinearLayout>
+
+            <include layout="@layout/tile_list_divider_material"/>
+
+            <!-- Background Color -->
+            <LinearLayout
+                android:id="@+id/developer_mode_lin_background_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:minHeight="48dp"
+                android:paddingLeft="@dimen/keyline_1"
+                android:paddingRight="@dimen/keyline_1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_weight="1"
+                    android:text="Background color"/>
+
+                <CheckBox
+                    android:id="@+id/developer_mode_cbx_background_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/developer_mode_lin_background_color_red"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/keyline_1"
+                android:paddingRight="@dimen/keyline_1">
+
+                <SeekBar
+                    android:id="@+id/developer_mode_seek_background_color_red"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:id="@+id/developer_mode_view_background_color_red"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="@dimen/margin_small"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/developer_mode_lin_background_color_green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/keyline_1"
+                android:paddingRight="@dimen/keyline_1">
+
+                <SeekBar
+                    android:id="@+id/developer_mode_seek_background_color_green"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:id="@+id/developer_mode_view_background_color_green"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+
+                    android:layout_margin="@dimen/margin_small"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/developer_mode_lin_background_color_blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/keyline_1"
+                android:paddingRight="@dimen/keyline_1">
+
+                <SeekBar
+                    android:id="@+id/developer_mode_seek_background_color_blue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:id="@+id/developer_mode_view_background_color_blue"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="@dimen/margin_small"/>
+            </LinearLayout>
+
+            <include layout="@layout/tile_list_divider_material"/>
+
+            <!-- Error -->
+            <LinearLayout
+                android:id="@+id/developer_mode_lin_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:minHeight="48dp"
+                android:paddingLeft="@dimen/keyline_1"
+                android:paddingRight="@dimen/keyline_1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/padding_small"
+                    android:layout_marginRight="@dimen/padding_small"
+                    android:layout_weight="1"
+                    android:text="Error"/>
+
+                <CheckBox
+                    android:id="@+id/developer_mode_cbx_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <MaterialEditText
+                android:id="@+id/developer_mode_edt_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/keyline_1"
+                android:layout_marginRight="@dimen/keyline_1"
+                android:singleLine="true"
+                android:text="Error text"/>
+
+            <include layout="@layout/tile_list_divider_material"/>
+
+            <!-- Error Color -->
+            <LinearLayout
+                android:id="@+id/developer_mode_lin_error_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:minHeight="48dp"
+                android:paddingLeft="@dimen/keyline_1"
+                android:paddingRight="@dimen/keyline_1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/padding_small"
+                    android:layout_marginRight="@dimen/padding_small"
+                    android:layout_weight="1"
+                    android:text="Error color"/>
+
+                <CheckBox
+                    android:id="@+id/developer_mode_cbx_error_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/developer_mode_lin_error_color_red"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/keyline_1"
+                android:paddingRight="@dimen/keyline_1">
+
+                <SeekBar
+                    android:id="@+id/developer_mode_seek_error_color_red"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:id="@+id/developer_mode_view_error_color_red"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="@dimen/margin_small"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/developer_mode_lin_error_color_green"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/keyline_1"
+                android:paddingRight="@dimen/keyline_1">
+
+                <SeekBar
+                    android:id="@+id/developer_mode_seek_error_color_green"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:id="@+id/developer_mode_view_error_color_green"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="@dimen/margin_small"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/developer_mode_lin_error_color_blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/keyline_1"
+                android:paddingRight="@dimen/keyline_1">
+
+                <SeekBar
+                    android:id="@+id/developer_mode_seek_error_color_blue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:id="@+id/developer_mode_view_error_color_blue"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="@dimen/margin_small"/>
+            </LinearLayout>
+
+            <include layout="@layout/tile_list_divider_material"/>
+
+            <!-- Floating Label -->
+            <LinearLayout
+                android:id="@+id/developer_mode_lin_floating_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:minHeight="48dp"
+                android:paddingLeft="@dimen/keyline_1"
+                android:paddingRight="@dimen/keyline_1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_weight="1"
+                    android:text="Floating label"/>
+
+                <CheckBox
+                    android:id="@+id/developer_mode_cbx_floating_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <MaterialEditText
+                android:id="@+id/developer_mode_edt_floating_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/keyline_1"
+                android:layout_marginRight="@dimen/keyline_1"
+                android:singleLine="true"
+                android:text="Label text"/>
+
+            <include layout="@layout/tile_list_divider_material"/>
+
+            <!-- Character Counter-->
+            <LinearLayout
+                android:id="@+id/developer_mode_lin_char_counter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:minHeight="48dp"
+                android:paddingLeft="@dimen/keyline_1"
+                android:paddingRight="@dimen/keyline_1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_weight="1"
+                    android:text="Character counter"/>
+
+                <CheckBox
+                    android:id="@+id/developer_mode_cbx_char_counter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/developer_mode_lin_max_characters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/keyline_1"
+                android:paddingRight="@dimen/keyline_1">
+
+                <SeekBar
+                    android:id="@+id/developer_mode_seek_max_characters"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingBottom="@dimen/padding_xsmall"
+                    android:paddingTop="@dimen/padding_xsmall"/>
+
+                <TextView
+                    android:id="@+id/developer_mode_tv_max_characters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_small"
+                    android:gravity="center_horizontal"/>
+            </LinearLayout>
+
+            <include layout="@layout/tile_list_divider_material"/>
+
+            <FullwidthEditText
+                android:id="@+id/developer_mode_edt_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/keyline_1"
+                android:layout_marginStart="@dimen/keyline_1"
+                android:inputType="textNoSuggestions|textMultiLine"
+                android:fontFamily="monospace"/>
+
+            <!--<include layout="@layout/tile_list_divider_material"/>-->
+
+            <!-- Icon -->
+            <!--<LinearLayout-->
+            <!--android:id="@+id/developer_mode_lin_with_icon"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="?android:attr/selectableItemBackground"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:minHeight="48dp"-->
+            <!--android:paddingLeft="@dimen/keyline_1"-->
+            <!--android:paddingRight="@dimen/keyline_1">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:layout_marginEnd="@dimen/margin_small"-->
+            <!--android:layout_marginRight="@dimen/margin_small"-->
+            <!--android:text="Icon"/>-->
+
+            <!--<CheckBox-->
+            <!--android:id="@+id/developer_mode_cbx_with_icon"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"/>-->
+            <!--</LinearLayout>-->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
